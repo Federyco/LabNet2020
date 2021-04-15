@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Transport_Execution/1.0.0": {
+        "runtime": {
+          "Transport_Execution.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Transport_Execution/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

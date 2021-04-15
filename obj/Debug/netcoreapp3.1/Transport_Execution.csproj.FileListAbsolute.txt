@@ -1,0 +1,13 @@
+C:\Users\MinDzDev\source\repos\Transport_Execution\Transport_Execution\obj\Debug\netcoreapp3.1\Transport_Execution.csprojAssemblyReference.cache
+C:\Users\MinDzDev\source\repos\Transport_Execution\Transport_Execution\obj\Debug\netcoreapp3.1\Transport_Execution.AssemblyInfoInputs.cache
+C:\Users\MinDzDev\source\repos\Transport_Execution\Transport_Execution\obj\Debug\netcoreapp3.1\Transport_Execution.AssemblyInfo.cs
+C:\Users\MinDzDev\source\repos\Transport_Execution\Transport_Execution\obj\Debug\netcoreapp3.1\Transport_Execution.csproj.CoreCompileInputs.cache
+C:\Users\MinDzDev\source\repos\Transport_Execution\Transport_Execution\bin\Debug\netcoreapp3.1\Transport_Execution.exe
+C:\Users\MinDzDev\source\repos\Transport_Execution\Transport_Execution\bin\Debug\netcoreapp3.1\Transport_Execution.deps.json
+C:\Users\MinDzDev\source\repos\Transport_Execution\Transport_Execution\bin\Debug\netcoreapp3.1\Transport_Execution.runtimeconfig.json
+C:\Users\MinDzDev\source\repos\Transport_Execution\Transport_Execution\bin\Debug\netcoreapp3.1\Transport_Execution.runtimeconfig.dev.json
+C:\Users\MinDzDev\source\repos\Transport_Execution\Transport_Execution\bin\Debug\netcoreapp3.1\Transport_Execution.dll
+C:\Users\MinDzDev\source\repos\Transport_Execution\Transport_Execution\bin\Debug\netcoreapp3.1\Transport_Execution.pdb
+C:\Users\MinDzDev\source\repos\Transport_Execution\Transport_Execution\obj\Debug\netcoreapp3.1\Transport_Execution.dll
+C:\Users\MinDzDev\source\repos\Transport_Execution\Transport_Execution\obj\Debug\netcoreapp3.1\Transport_Execution.pdb
+C:\Users\MinDzDev\source\repos\Transport_Execution\Transport_Execution\obj\Debug\netcoreapp3.1\Transport_Execution.genruntimeconfig.cache
