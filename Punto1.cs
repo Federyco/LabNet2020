@@ -24,13 +24,16 @@ namespace ExtensionsAndExceptions
                 variable1 = Console.ReadLine();
                 if (emIAnInteger(variable1) == true)
                 {
-                   
+
                     Console.WriteLine("Valor 1 ingresado exitosamente");
                     Console.WriteLine("Ingrese el valor 2, y presione Enter para continuar");
                     bloqueo1 = false;
                 }
                 else
                 {
+                    ArgumentNullException argumento = new ArgumentNullException();
+                    Console.WriteLine(argumento.Message);
+                    Console.WriteLine(argumento.StackTrace);
                     Console.WriteLine("Ingreso no válido, sólo se permiten números, intente nuevamente");
                     bloqueo1 = true;
                 }
@@ -46,11 +49,10 @@ namespace ExtensionsAndExceptions
                 else
                 {
                     Console.WriteLine("Ingreso no válido, sólo se permiten números, intente nuevamente");
-                    
+
                     bloqueo2 = true;
                 }
             }
-           
 
 
             try
@@ -58,9 +60,10 @@ namespace ExtensionsAndExceptions
                 parsevar1 = Convert.ToInt32(variable1);
                 parsevar2 = Convert.ToInt32(variable2);
                 resultado = parsevar1 / parsevar2;
-                
+
 
             }
+
             catch (Exception ex)
             {
                 Console.WriteLine($"\nMensaje propio: {ex.Message}");
@@ -68,6 +71,7 @@ namespace ExtensionsAndExceptions
                 Console.WriteLine("\nLas divisiones por 0, no están permitidas.");
                 Console.WriteLine("\nSolo Chuck Norris divide por cero!");
             }
+
             finally
             {
                 if (parsevar2 != 0)
@@ -75,14 +79,14 @@ namespace ExtensionsAndExceptions
                     Console.WriteLine("\nOperación exitosa");
                     Console.WriteLine($"\nEl resultado es {resultado}");
                 }
-                else 
+                else
                 {
                     Console.WriteLine("\nLa operación Falló");
                 }
             }
 
 
-            
+
 
 
 
@@ -96,6 +100,7 @@ namespace ExtensionsAndExceptions
             {
                 return int.TryParse(input, out number);
             }
+            
             catch (Exception ex)
             {
                 throw ex;
@@ -103,5 +108,6 @@ namespace ExtensionsAndExceptions
             
 
         }
+
     }
 }
