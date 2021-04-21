@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_1_Transportes_2._0
 {
-    public abstract class Transportes
+    public abstract class Transportes : Interfaces
     {
         private int pasajeros {get;}
 
@@ -28,8 +28,5 @@ namespace Ejercicio_1_Transportes_2._0
 
     }
 
-    public interface IVehiculoTerrestre
-    {
-        bool _esTerrestre();
-    }
+ 
 }

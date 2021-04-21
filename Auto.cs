@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Ejercicio_1_Transportes_2._0
 {
     //auto hereda de transportes
-    public class Auto : Transportes
+    public class Auto : Transportes, Interfaces.IVehiculosProperties
     {
         //constructor de la clase Auto recibe(pasajeros y un Id de vehiculo) : base heredada (pasajeros, id de vehiculo)
         public Auto(int pasajerosAuto, int id) : base(pasajerosAuto, id)
@@ -27,6 +27,10 @@ namespace Ejercicio_1_Transportes_2._0
         public bool _esTerrestre()
         {
             return true;
+        }
+        public string colores(string color) 
+        {
+            return $"hay un auto de color : {color}";
         }
 
     }

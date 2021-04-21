@@ -12,14 +12,15 @@ namespace Ejercicio_1_Transportes_2._0
         {
 
 
-            listManagement();
+            ListManagement();
             InterfaceImplementation();
+            InterfaceColorImplementation("Negro", "Blanco");
             Console.ReadLine();
 
 
         }
 
-        private static void listManagement() 
+        private static void ListManagement() 
         {
             List<Transportes> Vechiculos = new List<Transportes>() {
 
@@ -55,7 +56,7 @@ namespace Ejercicio_1_Transportes_2._0
             Auto Iauto = new Auto(0, 0);
             Avion Iavion = new Avion(0, 0);
 
-            Console.WriteLine("Implementación de la interface 'IVehiculoTerrestre'");
+            Console.WriteLine("Implementación de la interface 'IVehiculosProperties'");
             if (Iavion._esTerrestre() == false)
             {
                 Console.WriteLine("Los Aviones son Transportes aereos");
@@ -64,6 +65,15 @@ namespace Ejercicio_1_Transportes_2._0
             {
                 Console.WriteLine("Los Automóviles son Transportes terrestres");
             }
+        }
+        private static void InterfaceColorImplementation(string colorauto, string coloravion) 
+        {
+            Auto Iauto = new Auto(0, 0);
+            Avion Iavion = new Avion(0, 0);
+            Console.WriteLine("Implementación de la interface 'IVehiculosProperties'");
+            Console.WriteLine(Iauto.colores(colorauto));
+            Console.WriteLine(Iavion.colores(coloravion));
+
         }
 
     }
