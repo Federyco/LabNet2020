@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_1_Transportes_2._0
 {
-    public class Interfaces
-    {
-        public interface IVehiculosProperties
+        public interface IVehiculos
         {
             bool _esTerrestre();
             string colores(string color);
         }
-    }
 }

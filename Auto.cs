@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Ejercicio_1_Transportes_2._0
 {
     //auto hereda de transportes
-    public class Auto : Transportes, Interfaces.IVehiculosProperties
+    public class Auto : Transportes, IVehiculos
     {
         //constructor de la clase Auto recibe(pasajeros y un Id de vehiculo) : base heredada (pasajeros, id de vehiculo)
         public Auto(int pasajerosAuto, int id) : base(pasajerosAuto, id)

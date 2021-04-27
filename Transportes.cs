@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_1_Transportes_2._0
 {
-    public abstract class Transportes : Interfaces
+    public abstract class Transportes
     {
         private int pasajeros {get;}
 

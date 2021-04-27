@@ -13,8 +13,6 @@ namespace Ejercicio_1_Transportes_2._0
 
 
             ListManagement();
-            InterfaceImplementation();
-            InterfaceColorImplementation("Negro", "Blanco");
             Console.ReadLine();
 
 
@@ -41,40 +39,17 @@ namespace Ejercicio_1_Transportes_2._0
             {
                 if (item.ToString().Contains("Auto"))
                 {
-                    Console.WriteLine($"Automóvil {item.vehicle_id} : {item.getPasajeros()} pasajeros");
+                    Console.WriteLine($"Automóvil {item.vehicle_id} : {item.getPasajeros()} pasajeros y es Terrestre ");
                 }
                 else
                 {
-                    Console.WriteLine($"Avión {item.vehicle_id} : {item.getPasajeros()} pasajeros");
+                    Console.WriteLine($"Avión {item.vehicle_id} : {item.getPasajeros()} pasajeros y es Aereo");
                 }
 
             }
         }
 
-        private static void InterfaceImplementation() 
-        {
-            Auto Iauto = new Auto(0, 0);
-            Avion Iavion = new Avion(0, 0);
-
-            Console.WriteLine("Implementación de la interface 'IVehiculosProperties'");
-            if (Iavion._esTerrestre() == false)
-            {
-                Console.WriteLine("Los Aviones son Transportes aereos");
-            }
-            if (Iauto._esTerrestre() == true)
-            {
-                Console.WriteLine("Los Automóviles son Transportes terrestres");
-            }
-        }
-        private static void InterfaceColorImplementation(string colorauto, string coloravion) 
-        {
-            Auto Iauto = new Auto(0, 0);
-            Avion Iavion = new Avion(0, 0);
-            Console.WriteLine("Implementación de la interface 'IVehiculosProperties'");
-            Console.WriteLine(Iauto.colores(colorauto));
-            Console.WriteLine(Iavion.colores(coloravion));
-
-        }
+   
 
     }
 }

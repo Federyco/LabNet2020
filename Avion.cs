@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_1_Transportes_2._0
 {
-    public class Avion : Transportes, Interfaces.IVehiculosProperties
+    public class Avion : Transportes, IVehiculos
     {
         //constructor de la clase Avion recibe(pasajeros y un Id de vehiculo) : base heredada (pasajeros, id de vehiculo)
         public Avion(int pasajerosAuto, int id) : base(pasajerosAuto, id)
