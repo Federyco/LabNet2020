@@ -1,5 +1,6 @@
 //escondo la alerta de campo correcto
 renew();
+MagGlass();
 //funcion de validación al momento de clikear el boton de submit
 document.getElementById("newAccount").onclick = function accountCreated() {
     const nombre = document.getElementById("nombre")
@@ -32,18 +33,19 @@ document.getElementById("newAccount").onclick = function accountCreated() {
             
         }
     })
-    renew();
 };
 
 document.getElementById("cleanse_button").onclick = function cleanse() {
     form = document.getElementById("form");
     renew();
+    
     form.reset();
 
 };
 
 function renew()
 {
+    normalGlass();
     document.getElementById("approbbed").hidden = true;
     document.getElementById("rejected_name").hidden = true;
     document.getElementById("rejected_lastName").hidden = true;
@@ -55,14 +57,6 @@ function renew()
     document.getElementById("checkboxother").hidden = false;
 };
 
-document.getElementById("checkboxmasc").onclick = function hideOthers() {
-    var uno = document.getElementById("checkboxfem");
-    var dos = document.getElementById("checkboxother");
-
-    uno.hidden = true;
-    dos.hidden = true;
-
-};
 document.getElementById("checkboxmasc").onclick = function hideFemAndOthers() {
     var masc = document.getElementById("checkboxmasc");
     var fem = document.getElementById("checkboxfem");
@@ -73,7 +67,7 @@ document.getElementById("checkboxmasc").onclick = function hideFemAndOthers() {
         other.hidden = true;
 
     }
-}
+};
 document.getElementById("checkboxfem").onclick = function hideMascAndOthers() {
     var masc = document.getElementById("checkboxmasc");
     var fem = document.getElementById("checkboxfem");
@@ -83,7 +77,7 @@ document.getElementById("checkboxfem").onclick = function hideMascAndOthers() {
         masc.hidden = true;
         other.hidden = true;
     }
-}
+};
 document.getElementById("checkboxother").onclick = function hideFemAndMasc() {
     var masc = document.getElementById("checkboxmasc");
     var fem = document.getElementById("checkboxfem");
@@ -93,4 +87,23 @@ document.getElementById("checkboxother").onclick = function hideFemAndMasc() {
         fem.hidden = true;
         masc.hidden = true;
     }
-}
+};
+
+//JQuery
+function MagGlass() {
+    var addInfo = $('#addInfo');
+
+    $('.formulario_NewAccount_button').click(function () {
+        addInfo.addClass('display-4');
+    })
+};
+
+function normalGlass()
+{
+    var addInfo = $('#addInfo');
+
+    $('.formulario_release_button').click(function () {
+        addInfo.removeClass('display-4');
+    })
+};
+
