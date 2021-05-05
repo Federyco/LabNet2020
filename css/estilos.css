@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+.formulario {
+    width: 550px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    position: relative;
+    height: 700px;
+    background-color:white;
+   
+}
+
+.formulario__titulo{
+    text-align: center;
+    margin-top:0;
+    color: rgba(0,0,0,0.7);
+}
+
+
+.formulario__input:focus {
+    outline:1px solid rgba(0,0,0,0.7);
+}
+
+.formulario__input {
+    padding: 20px;
+    background: rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.3);
+    margin-bottom: 40px;
+    display: block;
+    width: 500px;
+    height: 8px;
+    font-size: 1.3em;
+}
+.formulario_addInfo_input:focus {
+    outline: 1px solid rgba(0,0,0,0.7);
+}
+
+.formulario_addInfo_input {
+    padding: 20px;
+    background: rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.3);
+    margin-top: 200px;
+    height: 150px;
+    width: 500px;
+    height: 100px;
+    font-size: 1.3em;
+}
+.formulario_addInfo_label {
+    padding-left: 15px;
+    position: absolute;
+    margin-top: 150px;
+    margin-left:128px;
+    font-size: 1.3em;
+}
+
+.formulario_label_nombre {
+    padding-left: 0px;
+    position: absolute;
+    margin-top: -30px;
+    transition: all;
+    display: block;
+    width: 100%;
+    font-size: 1.3em;
+}
+.formulario_label_apellido {
+    padding-left: 0px;
+    position: absolute;
+    margin-top: -30px;
+    transition: all;
+    display: block;
+    width: 100%;
+    font-size: 1.3em;
+}
+.formulario_label_edad {
+    padding-left: 0px;
+    position: absolute;
+    margin-top: -30px;
+    transition: all;
+    display: block;
+    width: 100%;
+    font-size: 1.3em;
+}
+.formulario_NewAccount_button {
+    width: 200px;
+    height: 50px;
+    border: none;
+    color: white;
+    position: absolute;
+    background-color: rgb(131, 170, 124 );
+    border-radius: 4px;
+    margin-top: 30px;
+    box-shadow: inset 0 0 0 0 #887caa;
+    transition: ease-out 0.3s;
+    font-size: 1.3em;
+    outline: none;
+}
+.formulario_NewAccount_button:hover {
+    box-shadow: inset 300px 0 0 0 #887caa;
+    cursor: pointer;
+    color: #000;
+}
+.formulario_release_button {
+    width: 200px;
+    height: 50px;
+    border: none;
+    color: white;
+    position: absolute;
+    background-color: rgb(197, 151, 68);
+    border-radius: 4px;
+    margin-top: 30px;
+    margin-left: 310px;
+    box-shadow: inset 0 0 0 0 #df4712;
+    transition: ease-out 0.3s;
+    font-size: 1.3em;
+    outline: none;
+}
+.formulario_release_button:hover {
+    box-shadow: inset 300px 0 0 0 #df4712;
+    cursor: pointer;
+    color: #000;
+}
+.formulario__gender {
+    padding-left: 0px;
+    position: absolute;
+    margin-top: -30px;
+    font-size: 1.3em;
+}
+
+.checkbox__masculino {
+    padding-left: 30px;
+    position: absolute;
+    margin-top: 15px;
+}
+.checkbox__femenino {
+    padding-left: 30px;
+    position:absolute;
+    margin-top: 65px;
+}
+.checkbox__other {
+    padding-left: 30px;
+    position: absolute;
+    margin-top: 115px;
+}
+.label_gender_masculino {
+    padding-left: 30px;
+    position: absolute;
+    margin-top: 4px;
+    font-size: 1.3em;
+}
+.label_gender_femenino {
+    padding-left: 30px;
+    position: absolute;
+    margin-top: 54px;
+    font-size: 1.3em;
+}
+.label_gender_other {
+    padding-left: 30px;
+    position: absolute;
+    margin-top: 104px;
+    font-size: 1.3em;
+}
+.fijar {
+    margin-top: -135px;
+}

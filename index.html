@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejercicio 6 Formulario</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-image: url(imgs/background.jpg);
+        }
+
+    </style>
+
+</head>
+<body>
+    <form action="/" class="formulario" id="form">
+        <h1 class="formulario__titulo"></h1>
+        <div>
+            <label for="nombre" class="formulario_label_nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" class="formulario__input">
+        </div>
+        <div>
+            <label for="apellido" class="formulario_label_apellido">Apellido</label>
+            <input id="apellido" name="apellido" type="text" class="formulario__input">
+        </div>
+        <div>
+            <label for="edad" class="formulario_label_edad">Edad</label>
+            <input id="edad" name="edad" type="text" class="formulario__input">
+        </div>
+        <div>
+            <label for="" class="formulario__gender">Sexo</label>
+        </div>
+        <div id="checkbox">
+            <label for="checkboxmasc" class="label_gender_masculino">Masculino</label>
+            <input id="checkboxmasc" name="checkboxmasc" type="checkbox" class="checkbox__masculino"/>
+            <label for="" class="label_gender_femenino">Femenino</label>
+            <input id="checkboxfem" type="checkbox" class="checkbox__femenino" value="" />
+            <label for="" class="label_gender_other">Otros</label>
+            <input id="checkboxother" type="checkbox" class="checkbox__other" value="" />
+        </div>
+        <div id="adiotionalInfo">
+            <label for="" class="formulario_addInfo_label">Información Adicional</label>
+            <input id="addInfo" name="addInfo" type="text" class="formulario_addInfo_input">
+        </div>
+         
+
+        <input id="newAccount" type="submit" class="formulario_NewAccount_button" value="Crear Nueva Cuenta" />
+        <input id="cleanse_button" type="button" class="formulario_release_button" value="Limpiar Campos" />
+
+
+        <div class="alert alert-success alert-dismissible fade show" id="approbbed" style="margin-top:130px">
+            <button id="buttonok" type="button" class="close" data-dismiss="alert">&times;</button> Cuenta creada con <strong>éxito!</strong>
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" id="rejected_name" style="margin-top:130px">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            Error detectado en el campo <strong>Nombre.</strong>
+        </div>
+        <div class="alert alert-danger alert-dismissible " id="rejected_lastName">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            Error detectado en el campo <strong>Apellido.</strong>
+        </div>
+
+    </form>
+        <script src="scripts/core.js"></script>
+    </body>
+    </html>
