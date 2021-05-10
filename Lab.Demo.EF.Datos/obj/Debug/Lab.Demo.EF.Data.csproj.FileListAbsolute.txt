@@ -1,0 +1,15 @@
+C:\Users\MinDzDev\source\repos\Lab.Demo.EF\Lab.Demo.EF.Datos\bin\Debug\Lab.Demo.EF.Datos.dll.config
+C:\Users\MinDzDev\source\repos\Lab.Demo.EF\Lab.Demo.EF.Datos\bin\Debug\Lab.Demo.EF.Datos.dll
+C:\Users\MinDzDev\source\repos\Lab.Demo.EF\Lab.Demo.EF.Datos\bin\Debug\Lab.Demo.EF.Datos.pdb
+C:\Users\MinDzDev\source\repos\Lab.Demo.EF\Lab.Demo.EF.Datos\bin\Debug\EntityFramework.dll
+C:\Users\MinDzDev\source\repos\Lab.Demo.EF\Lab.Demo.EF.Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MinDzDev\source\repos\Lab.Demo.EF\Lab.Demo.EF.Datos\bin\Debug\Lab.Demo.EF.Entities.dll
+C:\Users\MinDzDev\source\repos\Lab.Demo.EF\Lab.Demo.EF.Datos\bin\Debug\Lab.Demo.EF.Entities.pdb
+C:\Users\MinDzDev\source\repos\Lab.Demo.EF\Lab.Demo.EF.Datos\bin\Debug\Lab.Demo.EF.Entities.dll.config
+C:\Users\MinDzDev\source\repos\Lab.Demo.EF\Lab.Demo.EF.Datos\bin\Debug\EntityFramework.xml
+C:\Users\MinDzDev\source\repos\Lab.Demo.EF\Lab.Demo.EF.Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MinDzDev\source\repos\Lab.Demo.EF\Lab.Demo.EF.Datos\obj\Debug\Lab.Demo.EF.Data.csprojAssemblyReference.cache
+C:\Users\MinDzDev\source\repos\Lab.Demo.EF\Lab.Demo.EF.Datos\obj\Debug\Lab.Demo.EF.Data.csproj.CoreCompileInputs.cache
+C:\Users\MinDzDev\source\repos\Lab.Demo.EF\Lab.Demo.EF.Datos\obj\Debug\Lab.Demo.EF.Data.csproj.CopyComplete
+C:\Users\MinDzDev\source\repos\Lab.Demo.EF\Lab.Demo.EF.Datos\obj\Debug\Lab.Demo.EF.Datos.dll
+C:\Users\MinDzDev\source\repos\Lab.Demo.EF\Lab.Demo.EF.Datos\obj\Debug\Lab.Demo.EF.Datos.pdb
