@@ -1,13 +1,14 @@
 ﻿ @model List<Lab.Demo.EF.MVC.Models.CustomerView>
-@ViewBag.Title <p><h1>Sistema de Clientes</h1></p>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Sistema ABM con MVP </title>
+    
     <link rel="stylesheet" href="~/css/estilos.css">
-   
+    <title >Clientes Sistema ABM con MVP </title>
 </head>
+
 <body>
-    <table class="table table-bordered table-striped">
+    <h2 class="select_title">Listado de Clientes</h2>
+    <table class="tabla_select">
         <thead>
             <tr>
                 <th scope="col">Customer ID</th>
@@ -28,7 +29,7 @@
             @{foreach (var customer in Model)
               {
                         <tr>
-                            <th>@customer.id</th>
+                            <td>@customer.id</td>
                             <td>@customer.companyName</td>
                             <td>@customer.contactName</td>
                             <td>@customer.contactTitle</td>
