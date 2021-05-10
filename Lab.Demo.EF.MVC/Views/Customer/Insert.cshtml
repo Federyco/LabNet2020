@@ -1,0 +1,67 @@
+﻿@model Lab.Demo.EF.MVC.Models.CustomerView
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    @{ViewBag.Title = "Customers Management";}
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Own CSS-->
+    <link rel="stylesheet" href="~/css/estilos.css" />
+
+</head>
+<body>
+
+
+    <div class="formulario_insert">
+        @using (Html.BeginForm("Insert", "Customer", FormMethod.Post))
+        {
+        <form action="/" id="form">
+            <div>
+                <h1 class="title_Insert_decoration">Generar Nuevo Cliente</h1>
+                <p class="info_insert_decoration">Ingrese los datos requeridos para generar un <strong>Nuevo Cliente</strong> recuerde que todos los datos son <u>obligatorios</u>(*)</p>
+            </div>
+            <div class="div_label_companyName">
+                <label>CompanyName  </label>(*)
+                <p>@Html.TextBoxFor(c => c.companyName)</p><br>
+            </div>
+            <div class="div_label_contactName"><label>ContactName  </label>(*)<p>@Html.TextBoxFor(c => c.contactName)</p><br></div>
+            <div class="div_label_contactTitle"><label>ContactTitle </label>(*)<p>@Html.TextBoxFor(c => c.contactTitle)</p><br></div>
+            <div class="div_label_address"><label>Address </label>(*)<p>@Html.TextBoxFor(c => c.address)</p><br></div>
+            <div class="div_label_city"><label>City </label>(*)<p>@Html.TextBoxFor(c => c.city)</p><br></div>
+            <div class="div_label_region"><label>Region </label>(*)<p>@Html.TextBoxFor(c => c.region)</p><br></div>
+            <div class="div_label_postalCode"><label>PostalCode: </label>(*)<p>@Html.TextBoxFor(c => c.postalCode)</p><br></div>
+            <div class="div_label_country"><label>Country </label>(*)<p>@Html.TextBoxFor(c => c.country)</p><br></div>
+            <div class="div_label_phone"><label>Phone </label>(*)<p>@Html.TextBoxFor(c => c.contactPhone)</p><br></div>
+            <div class="div_label_fax"><label>Fax </label>(*)<p>@Html.TextBoxFor(c => c.fax)</p><br></div>
+            <div class="button_insert"><input type="submit" id="newCustomer" class="btn btn-success" value="Generar Nuevo Cliente" /></div>
+        </form>
+        }
+    </div>
+
+
+
+    <div class="formulario_update">
+        @using (Html.BeginForm("Update", "Customer", FormMethod.Post))
+        {
+        <div>
+            <h1 class="title_update_decoration">Update Client</h1>
+            <p class="info_update_decoration">Ingrese el <strong>ID</strong> del cliente y el <strong>nombre</strong> para actualizarlo</p>
+        </div>
+        <form action="/">
+            <div class="div_label_id"><label>ID </label>(*)<p>@Html.TextBoxFor(c => c.id)</p><br></div>
+            <div class="div_label_name"><label>Contact Name </label>(*)<p>@Html.TextBoxFor(c => c.contactName)</p><br></div>
+            <div class="button_update"><input type="submit" name="Button" class="btn btn-success" value="Actualizar Cliente" /></div>
+        </form>
+        }
+    </div>
+</body>
+
+</html>

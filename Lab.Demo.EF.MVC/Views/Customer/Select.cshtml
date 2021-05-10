@@ -1,0 +1,48 @@
+﻿ @model List<Lab.Demo.EF.MVC.Models.CustomerView>
+@ViewBag.Title <p><h1>Sistema de Clientes</h1></p>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sistema ABM con MVP </title>
+    <link rel="stylesheet" href="~/css/estilos.css">
+   
+</head>
+<body>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Customer ID</th>
+                <th scope="col">Company Name</th>
+                <th scope="col">Contact Name</th>
+                <th scope="col">Contact Title</th>
+                <th scope="col">Address</th>
+                <th scope="col">City</th>
+                <th scope="col">Regi&Oacute;n</th>
+                <th scope="col">Postal Code</th>
+                <th scope="col">Country</th>
+                <th scope="col">Contact Phone</th>
+                <th scope="col">Fax</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @{foreach (var customer in Model)
+              {
+                        <tr>
+                            <th>@customer.id</th>
+                            <td>@customer.companyName</td>
+                            <td>@customer.contactName</td>
+                            <td>@customer.contactTitle</td>
+                            <td>@customer.address</td>
+                            <td>@customer.city</td>
+                            <td>@customer.region</td>
+                            <td>@customer.postalCode</td>
+                            <td>@customer.country</td>
+                            <td>@customer.contactPhone</td>
+                            <td>@customer.fax</td>
+                        </tr>
+              }
+            }
+        </tbody>
+    </table>
+</body>
+</html>

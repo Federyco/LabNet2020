@@ -1,0 +1,202 @@
+﻿* {
+}
+
+body {
+    display:block;
+    position:absolute;
+}
+.formulario_insert {
+    width: 550px;
+    max-width: 100%;
+    margin-top: 100px;
+    margin-left: 100px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    position: absolute;
+    height: 700px;
+    background-color: white;
+}
+
+/*Insert Section*/
+.info_insert_decoration {
+     position: absolute;
+     color: black;
+     display: block;
+     margin-left: 30px;
+     margin-top: 640px;
+     font-size: 1.3em;
+ }
+
+.div_Insert_estructure {
+    display: block;
+    font-size: 1.2em;
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 150px;
+    width: 900px;
+    height: 300px;
+}
+.title_Insert_decoration {
+    position: absolute;
+    color: aquamarine;
+    display: inline-block;
+    margin-left: 70px;
+    margin-top: 30px;
+}
+
+.div_label_companyName {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+.div_label_contactName {
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 100px;
+}
+
+.div_label_contactTitle {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 200px;
+}
+.div_label_address {
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 300px;
+}
+.div_label_city {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 400px;
+}
+.div_label_region {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 300px;
+}
+.div_label_postalCode {
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 200px;
+}
+.div_label_country {
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 400px;
+}
+.div_label_phone {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 500px;
+}
+.div_label_fax {
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 500px;
+}
+.button_insert {
+    position: absolute;
+    margin-left: 170px;
+    margin-top: 600px;
+}
+/*Update Section*/
+.formulario_update {
+    width: 550px;
+    max-width: 100%;
+    margin-top: 100px;
+    margin-left: 1150px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    position: absolute;
+    height: 700px;
+    background-color: white;
+}
+.title_update_decoration {
+    position: absolute;
+    color: aquamarine;
+    display: inline-block;
+    margin-left: 150px;
+    margin-top: 30px;
+}
+
+.div_update_estructure {
+    display: block;
+    font-size: 1.2em;
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 550px;
+}
+
+.div_label_id {
+    position: absolute;
+    margin-left: 210px;
+    margin-top: 150px;
+}
+
+.div_label_name {
+    position: absolute;
+    margin-left: 210px;
+    margin-top: 300px;
+}
+
+.button_update {
+    position: absolute;
+    margin-left: 210px;
+    margin-top: 450px;
+}
+
+.info_update_decoration {
+    position: absolute;
+    color: black;
+    display: block;
+    margin-left: 60px;
+    margin-top: 500px;
+    font-size: 1.3em;
+}
+/*Delete Section*/
+.formulario_delete {
+    width: 550px;
+    max-width: 100%;
+    margin-top: 100px;
+    margin-left: 600px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    position: absolute;
+    height: 700px;
+    background-color: white;
+}
+.info_delete_decoration {
+    position: absolute;
+    color: black;
+    display: block;
+    margin-left: 60px;
+    margin-top: 100px;
+    font-size: 1.3em;
+}
+.button_delete {
+    position: absolute;
+    margin-left: 210px;
+    margin-top: 350px;
+}
+.div_label_id_delete {
+    position: absolute;
+    margin-left: 180px;
+    margin-top: 220px;
+}
+.title_delete_decoration {
+    position: absolute;
+    color: aquamarine;
+    display: inline-block;
+    margin-left: 70px;
+    margin-top: 30px;
+}
+/*Select Style*/
+.tabla_select 
+{
+    position:absolute;
+    margin-left:150px;
+    margin-top:150px;
+}
+    .tabla_select th {
+        position: absolute;
+        box-shadow:rgb(255 150 25) 10px 10px inset;
+    }
