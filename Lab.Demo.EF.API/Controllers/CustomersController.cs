@@ -18,8 +18,8 @@ namespace Lab.Demo.EF.API.Controllers
 {
     public class CustomersController : ApiController
     {
-        private NorthWindContext db = new NorthWindContext();
-        CustomersLogic logic = new CustomersLogic();
+        
+        private CustomersLogic logic = new CustomersLogic();
 
         // GET: api/Customers
         public List<Customers> GetCustomers()
@@ -31,7 +31,7 @@ namespace Lab.Demo.EF.API.Controllers
         [ResponseType(typeof(Customers))]
         public IHttpActionResult GetCustomers(string id)
         {
-            Customers customers = db.Customers.Find(id);
+            Customers customers = logic.getOneCustomer(id);
             if (customers == null)
             {
                 return NotFound();
@@ -42,27 +42,24 @@ namespace Lab.Demo.EF.API.Controllers
 
         // PUT: api/Customers/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutCustomers(string id, Customers customers)
+        public IHttpActionResult PutCustomers(Customers customers)
         {
+            string getID = customers.CustomerID;
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
-            if (id != customers.CustomerID)
+            if (getID != customers.CustomerID)
             {
                 return BadRequest();
             }
-
-            db.Entry(customers).State = EntityState.Modified;
-
             try
             {
-                db.SaveChanges();
+                logic.Add(customers);
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CustomersExists(id))
+                if (!CustomersExists(getID))
                 {
                     return NotFound();
                 }
@@ -71,10 +68,8 @@ namespace Lab.Demo.EF.API.Controllers
                     throw;
                 }
             }
-
             return StatusCode(HttpStatusCode.NoContent);
         }
-
         // POST: api/Customers
         [ResponseType(typeof(Customers))]
         public IHttpActionResult PostCustomers(Customers customers)
@@ -83,12 +78,9 @@ namespace Lab.Demo.EF.API.Controllers
             {
                 return BadRequest(ModelState);
             }
-
-            db.Customers.Add(customers);
-
             try
             {
-                db.SaveChanges();
+                logic.Add(customers);
             }
             catch (DbUpdateException)
             {
@@ -101,38 +93,36 @@ namespace Lab.Demo.EF.API.Controllers
                     throw;
                 }
             }
-
             return CreatedAtRoute("DefaultApi", new { id = customers.CustomerID }, customers);
         }
-
         // DELETE: api/Customers/5
         [ResponseType(typeof(Customers))]
         public IHttpActionResult DeleteCustomers(string id)
         {
-            Customers customers = db.Customers.Find(id);
+            Customers customers = logic.getOneCustomer(id);
             if (customers == null)
             {
                 return NotFound();
             }
+            try
+            {
+                logic.deleteCustomer(id);
+                return Ok(customers);
 
-            db.Customers.Remove(customers);
-            db.SaveChanges();
+            }
+            catch (Exception)
+            {
 
-            return Ok(customers);
+                throw;
+            }   
         }
-
         protected override void Dispose(bool disposing)
         {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
+            disposing = true;
         }
-
         private bool CustomersExists(string id)
         {
-            return db.Customers.Count(e => e.CustomerID == id) > 0;
+            return logic.SearchForExistence(id);
         }
     }
 }

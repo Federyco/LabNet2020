@@ -111,5 +111,11 @@ namespace Lab.Demo.EF.Logic
 
         }
 
+        public Customers getOneCustomer(string id)
+        {          
+            return context.Customers.Find(id);   
+        }
+
+       
     }
 }
