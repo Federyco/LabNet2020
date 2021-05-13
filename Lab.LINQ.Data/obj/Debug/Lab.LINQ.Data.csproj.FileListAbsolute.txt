@@ -1,0 +1,15 @@
+C:\Users\MinDzDev\source\repos\Lab.LINQ\Lab.LINQ.Data\bin\Debug\Lab.LINQ.Data.dll
+C:\Users\MinDzDev\source\repos\Lab.LINQ\Lab.LINQ.Data\bin\Debug\Lab.LINQ.Data.pdb
+C:\Users\MinDzDev\source\repos\Lab.LINQ\Lab.LINQ.Data\obj\Debug\Lab.LINQ.Data.csprojAssemblyReference.cache
+C:\Users\MinDzDev\source\repos\Lab.LINQ\Lab.LINQ.Data\obj\Debug\Lab.LINQ.Data.csproj.CoreCompileInputs.cache
+C:\Users\MinDzDev\source\repos\Lab.LINQ\Lab.LINQ.Data\obj\Debug\Lab.LINQ.Data.dll
+C:\Users\MinDzDev\source\repos\Lab.LINQ\Lab.LINQ.Data\obj\Debug\Lab.LINQ.Data.pdb
+C:\Users\MinDzDev\source\repos\Lab.LINQ\Lab.LINQ.Data\bin\Debug\Lab.LINQ.Data.dll.config
+C:\Users\MinDzDev\source\repos\Lab.LINQ\Lab.LINQ.Data\bin\Debug\EntityFramework.dll
+C:\Users\MinDzDev\source\repos\Lab.LINQ\Lab.LINQ.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MinDzDev\source\repos\Lab.LINQ\Lab.LINQ.Data\bin\Debug\Lab.LINQ.Entities.dll
+C:\Users\MinDzDev\source\repos\Lab.LINQ\Lab.LINQ.Data\bin\Debug\Lab.LINQ.Entities.pdb
+C:\Users\MinDzDev\source\repos\Lab.LINQ\Lab.LINQ.Data\bin\Debug\Lab.LINQ.Entities.dll.config
+C:\Users\MinDzDev\source\repos\Lab.LINQ\Lab.LINQ.Data\bin\Debug\EntityFramework.xml
+C:\Users\MinDzDev\source\repos\Lab.LINQ\Lab.LINQ.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MinDzDev\source\repos\Lab.LINQ\Lab.LINQ.Data\obj\Debug\Lab.LINQ.Data.csproj.CopyComplete
