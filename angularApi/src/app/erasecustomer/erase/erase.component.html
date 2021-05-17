@@ -1,0 +1,13 @@
+<div class="container">
+    <form [formGroup]="formularioErase">
+        Ingrese el ID del cliente que desea eliminar:
+        <input [class.is-invalid]="
+        formularioErase.get('customerId').touched &&
+        formularioErase.get('customerId').invalid
+      " type="text" class="form-control" formControlName="customerId" style="position: absolute; width: 200px" required/>
+        <button (click)="Delete()" class="btn btn-primary" type="submit"
+            style="position: absolute; margin-top: 20px; margin-left: -65px">
+            Eliminar
+        </button>
+    </form>
+</div>

@@ -1,5 +1,11 @@
 <div>
-  <table class="table table-bordered table-dark" style="position:absolute;margin-left: 400px; align-content: left; width: 300px;">
+  <table class="table table-bordered table-dark" style="
+      position: absolute;
+      margin-left: 60px;
+      align-content: left;
+      width: 1800px;
+      margin-top: 80px;
+    ">
     <thead>
       <tr>
         <th scope="col">CustomerID</th>
@@ -16,18 +22,18 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let customer of clientes" style="width: 250px; height: 50px;">
-          <th scope="row">{{ customer.CustomerID }}</th>
-          <td>{{ customer.CompanyName }}</td>
-          <td>{{ customer.ContactName }}</td>
-          <td>{{ customer.ContactTitle }}</td>
-          <td>{{ customer.Address }}</td>
-          <td>{{ customer.City }}</td>
-          <td>{{ customer.Region }}</td>
-          <td>{{ customer.PostalCode }}</td>
-          <td>{{ customer.Country }}</td>
-          <td>{{ customer.Phone }}</td>
-          <td>{{ customer.Fax }}</td>
+      <tr *ngFor="let customer of clientes" style="width: 250px; height: 50px">
+        <th scope="row">{{ customer.id }}</th>
+        <td>{{ customer.companyName }}</td>
+        <td>{{ customer.contactName }}</td>
+        <td>{{ customer.contactTitle }}</td>
+        <td>{{ customer.address }}</td>
+        <td>{{ customer.city }}</td>
+        <td>{{ customer.region }}</td>
+        <td>{{ customer.postalCode }}</td>
+        <td>{{ customer.country }}</td>
+        <td>{{ customer.contactPhone }}</td>
+        <td>{{ customer.fax }}</td>
       </tr>
     </tbody>
   </table>
