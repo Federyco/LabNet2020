@@ -92,7 +92,8 @@ namespace Lab.LINQ.Logic
                 string busqueda_2_customers = " ";
                 var query = context.Customers.Where(c => c.CustomerID != busqueda_customers || c.CustomerID != busqueda_2_customers).ToList();
                 // forma 2 llamando al metodo ya existente
-                //var query = this.GetAll();
+                query2 = this.GetAll();
+                Console.WriteLine(query2);
                 foreach (var item in query)
                 {
                     Console.WriteLine("Mayusculas");
