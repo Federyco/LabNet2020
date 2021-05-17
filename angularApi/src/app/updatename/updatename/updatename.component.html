@@ -1,5 +1,107 @@
-<p>Customer ID:</p>
-<input type="text" [(ngModel)]="id" />
-<p>Customer New Contact Name:</p>
-<input type="text" [(ngModel)]="newname" />
-<button (click)="update()" style="position: absolute; margin-left: 60px;margin-top: -40px;">Actualizar</button>
+<div class="container bg-primary bg-gradient" style="width: 100%;height: 500px;box-shadow: 3px 3px 3px 3px;position: absolute;margin-top: -1110px;margin-left: 300px;">
+    <form [formGroup]="form">
+        <div style="margin-left:100px">
+            <div class="form-group">
+                <label for="customerId"
+                    style="position: absolute;margin-left: 100px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:white;">Customer
+                    ID</label>
+                <input placeholder="ID" type="text" class="form-control" formControlName="customerId"
+                    style="position: absolute; width: 200px; margin-left: 40px;margin-top: 40px;" required />
+            </div>
+            <div class="form-group">
+                <label
+                    style="position: absolute;margin-left: 300px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:white;"
+                    for="companyName">Company Name</label>
+                <input placeholder="Company Name" type="text" class="form-control" formControlName="companyName"
+                    style="position: absolute;margin-left:300px; width: 200px;margin-top: 40px;" required />
+            </div>
+            <div class="form-group">
+                <label
+                    style="position: absolute;margin-left: 550px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:white;"
+                    for="contactName">Contact Name</label>
+                <input placeholder="Contact Name" type="text" class="form-control" formControlName="contactName"
+                    style="position: absolute;margin-left:550px; width: 200px;margin-top: 40px;" required />
+            </div>
+            <div class="form-group">
+                <label
+                    style="position: absolute;margin-left: 800px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:white;"
+                    for="contactTitle">Contact Title</label>
+                <input placeholder="Contact Title" type="text" class="form-control" formControlName="contactTitle"
+                    style="position: absolute;margin-left:800px; width: 200px;margin-top: 40px;" required />
+            </div>
+        </div>
+        <div style="position: absolute; margin-left: 100px;">
+        <div class="form-group">
+            <label
+                style="position: absolute;margin-left: 100px;margin-top:110px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:white;"
+                for="address">Address</label>
+            <input placeholder="Adress"type="text" class="form-control" formControlName="address"
+                style="position: absolute; width: 200px ;margin-left: 40px;margin-top: 160px;" required />
+        </div>
+        <div class="form-group">
+            <label
+                style="position: absolute;margin-left: 320px;margin-top:110px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:white;"
+                for="city">City</label>
+            <input placeholder="City" type="text" class="form-control" formControlName="city"
+                style="position: absolute;margin-left:300px; width: 200px;margin-top: 160px;" required />
+        </div>
+        <div class="form-group">
+            <label
+                style="position: absolute;margin-left: 550px;margin-top:110px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:white;"
+                for="region">Región</label>
+            <input placeholder="Región" type="text" class="form-control" formControlName="region"
+                style="position: absolute;margin-left:550px; width: 200px;margin-top: 160px;" required />
+        </div>
+        <div class="form-group">
+            <label
+                style="position: absolute;margin-left: 750px;margin-top:110px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:white;"
+                for="postalCode">Postal Code</label>
+            <input placeholder="Postal Code" type="text" class="form-control" formControlName="postalCode"
+                style="position: absolute;margin-left:800px; width: 200px;margin-top: 160px;" required />
+        </div>
+    </div>
+    <div>
+        <div class="form-group">
+            <label
+                style="position: absolute;margin-left: 270px;margin-top:260px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:white;"
+                for="country">Country</label>
+            <input placeholder="Country" type="text" class="form-control" formControlName="country"
+                style="position: absolute;margin-left:270px; width: 200px;margin-top:300px;" required />
+        </div>
+        <div class="form-group">
+            <label
+                style="position: absolute;margin-left: 530px;margin-top:260px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:white;"
+                for="phone">Phone</label>
+            <input placeholder="Phone" type="text" class="form-control" formControlName="phone"
+                style="position: absolute;margin-left:530px; width: 200px;margin-top:300px;" required />
+        </div>
+        <div class="form-group">
+            <label
+                style="position: absolute;margin-left: 780px;margin-top:260px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:white;"
+                for="fax">Fax</label>
+            <input placeholder="Fax" type="text" class="form-control" formControlName="fax"
+                style="position: absolute;margin-left:780px; width: 200px;margin-top:300px;" required />
+        </div>
+    </div>
+        <div class="form-group">
+            <button (click)="formularioUpdate()" class="btn btn-success" type="submit"
+                style="position: absolute; margin-top: 450px; margin-left: 550px">
+                Actualizar Cliente
+            </button>
+        </div>
+    </form>
+</div>
+<div style="margin-top: -1200px;">
+    <label style="position: absolute;margin-left: 530px;margin-top: 172px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 5 - 5</label>
+    <label style="position: absolute;margin-left: 785px;margin-top: 172px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 8 - 20</label>
+    <label style="position: absolute;margin-left: 1030px;margin-top: 172px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 12 - 20</label>
+    <label style="position: absolute;margin-left: 1285px;margin-top: 172px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 2 - 20</label>
+    <label style="position: absolute;margin-left: 530px;margin-top: 290px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 8 - 20</label>
+    <label style="position: absolute;margin-left: 785px;margin-top: 290px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 8 - 20</label>
+    <label style="position: absolute;margin-left: 1030px;margin-top: 290px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 2 - 20</label>
+    <label style="position: absolute;margin-left: 1285px;margin-top: 290px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 4 - 10</label>
+    <label style="position: absolute;margin-left: 654px;margin-top: 430px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 2 - 20</label>
+    <label style="position: absolute;margin-left: 918px;margin-top: 430px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 8 - 12</label>
+    <label style="position: absolute;margin-left: 1170px;margin-top: 430px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 8 - 12</label>
+    <label style="position: absolute;margin-left: 325px;margin-top: 550px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;"> * Caracteres Mínimos y Máximos por campo</label>
+</div>

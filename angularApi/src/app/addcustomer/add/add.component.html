@@ -1,4 +1,4 @@
-<div class="container bg-primary bg-gradient" style="width: 100%;height: 500px;box-shadow: 3px 3px 3px 3px;">
+<div class="container bg-primary bg-gradient" style="width: 100%;height: 500px;box-shadow: 3px 3px 3px 3px;position: absolute;margin-top: -1110px;margin-left: 300px;">
     <form [formGroup]="form">
         <div style="margin-left:100px">
             <div class="form-group">
@@ -72,22 +72,36 @@
             <label
                 style="position: absolute;margin-left: 530px;margin-top:260px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:white;"
                 for="phone">Phone</label>
-            <input type="text" class="form-control" formControlName="phone"
+            <input placeholder="Phone" type="text" class="form-control" formControlName="phone"
                 style="position: absolute;margin-left:530px; width: 200px;margin-top:300px;" required />
         </div>
         <div class="form-group">
             <label
                 style="position: absolute;margin-left: 780px;margin-top:260px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:white;"
                 for="fax">Fax</label>
-            <input type="text" class="form-control" formControlName="fax"
+            <input placeholder="Fax" type="text" class="form-control" formControlName="fax"
                 style="position: absolute;margin-left:780px; width: 200px;margin-top:300px;" required />
         </div>
     </div>
         <div class="form-group">
-            <button (click)="formularioAdd()" class="btn btn-primary" type="submit"
-                style="position: absolute; margin-top: 600px; margin-left: 400px">
-                Eliminar
+            <button (click)="formularioAdd()" class="btn btn-success" type="submit"
+                style="position: absolute; margin-top: 450px; margin-left: 550px">
+                Nuevo Cliente
             </button>
         </div>
     </form>
+</div>
+<div style="margin-top: -1200px;">
+    <label style="position: absolute;margin-left: 530px;margin-top: 172px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 5 - 5</label>
+    <label style="position: absolute;margin-left: 785px;margin-top: 172px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 8 - 20</label>
+    <label style="position: absolute;margin-left: 1030px;margin-top: 172px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 12 - 20</label>
+    <label style="position: absolute;margin-left: 1285px;margin-top: 172px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 2 - 20</label>
+    <label style="position: absolute;margin-left: 530px;margin-top: 290px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 8 - 20</label>
+    <label style="position: absolute;margin-left: 785px;margin-top: 290px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 8 - 20</label>
+    <label style="position: absolute;margin-left: 1030px;margin-top: 290px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 2 - 20</label>
+    <label style="position: absolute;margin-left: 1285px;margin-top: 290px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 4 - 10</label>
+    <label style="position: absolute;margin-left: 654px;margin-top: 430px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 2 - 20</label>
+    <label style="position: absolute;margin-left: 918px;margin-top: 430px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 8 - 12</label>
+    <label style="position: absolute;margin-left: 1170px;margin-top: 430px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;">* 8 - 12</label>
+    <label style="position: absolute;margin-left: 325px;margin-top: 550px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:black;"> * Caracteres Mínimos y Máximos por campo</label>
 </div>

@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Pokebúsqueda';
-  title2='listar clientes';
+ backgoundImg:string = "/assets/background.png";
+ backgoundImg2:string = "/assets/background2.jpg";
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AddcustomerService} from '../../services/addcustomer.service';
 import {CustomersI} from '../../Models/customersI';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-add',
@@ -12,7 +13,7 @@ export class AddComponent implements OnInit {
 
 
 public form:FormGroup;
-constructor(private addService: AddcustomerService, private formbuilder:FormBuilder) { }
+constructor(private addService: AddcustomerService, private formbuilder:FormBuilder, private toastr:ToastrService) { }
 
 
 
@@ -46,8 +47,13 @@ constructor(private addService: AddcustomerService, private formbuilder:FormBuil
      nuevoCliente.country = this.form.get('country').value
      nuevoCliente.contactPhone = this.form.get('phone').value
      nuevoCliente.fax = this.form.get('fax').value
-     this.addService.addNewCustomer(nuevoCliente).subscribe((resp:any) =>{
-       console.log(resp)
-     })
+     this.addService.addNewCustomer(nuevoCliente).subscribe({
+      next: data => {
+        this.toastr.success("Nuevo cliente Agregado Exitosamente", 'Correcto!');
+      },
+      error: error => {
+        this.toastr.error('Ocurrió un error, revise sus datos!', 'Error!');
+      }
+  });
   }
 }

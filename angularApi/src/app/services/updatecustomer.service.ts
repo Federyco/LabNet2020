@@ -14,10 +14,8 @@ export class UpdatecustomerService {
   constructor(private http:HttpClient) { }
  
 
-  updateClientName(id: string, name:string) : Observable<CustomersI[]>{
-    let direccion = environment.urlAPI + "Customers";
-    console.log("estoy en el update: " + id +" "+ name)
-    return this.http.put<CustomersI[]>(direccion, id+"?contactName="+ name);
+  updateClientName(Customers:CustomersI){
+    return this.http.put(environment.urlAPI, Customers);
   }
 
 }

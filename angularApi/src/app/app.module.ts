@@ -2,7 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
+//visual
 import {ToastrModule} from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +22,7 @@ import { UpdatenameComponent } from './updatename/updatename/updatename.componen
     EraseComponent,
     AddComponent,
     UpdatenameComponent
+   
   ],
   imports: [
     BrowserModule,

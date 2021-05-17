@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { CustomersI } from 'src/app/Models/customersI';
-import {UpdatecustomerService} from '../../services/updatecustomer.service';
+import { UpdatecustomerService } from '../../services/updatecustomer.service';
 
 @Component({
   selector: 'app-updatename',
@@ -8,39 +10,48 @@ import {UpdatecustomerService} from '../../services/updatecustomer.service';
   styleUrls: ['./updatename.component.scss']
 })
 export class UpdatenameComponent implements OnInit {
-  public actualizar : CustomersI ={
-    id :'',
-companyName :'',
-contactName :'',
-contactTitle :'',
-address :'',
-city :'',
-region :'',
-postalCode :'',
-country :'',
-contactPhone :'',
-fax :''
-  }
-id = this.actualizar.id;
-newname = this.actualizar.contactName;
+
+public form: FormGroup;
+constructor(private updateService: UpdatecustomerService, private formbuilder: FormBuilder, private toastr: ToastrService) { }
 
 
-  constructor(private updateService:UpdatecustomerService) { }
+ngOnInit(): void {
+  this.form = this.formbuilder.group({
+    customerId: new FormControl('', Validators.required || Validators.minLength(5) || Validators.maxLength(5)),
+    companyName: new FormControl('', Validators.required || Validators.minLength(8) || Validators.maxLength(20)),
+    contactName: new FormControl('', Validators.required || Validators.minLength(12) || Validators.maxLength(20)),
+    contactTitle: new FormControl('', Validators.required || Validators.minLength(2) || Validators.maxLength(20)),
+    address: new FormControl('', Validators.required || Validators.minLength(8) || Validators.maxLength(20)),
+    city: new FormControl('', Validators.required || Validators.minLength(8) || Validators.maxLength(20)),
+    region: new FormControl('', Validators.required || Validators.minLength(2) || Validators.maxLength(20)),
+    postalCode: new FormControl('', Validators.required || Validators.minLength(4) || Validators.maxLength(10)),
+    country: new FormControl('', Validators.required || Validators.minLength(2) || Validators.maxLength(20)),
+    phone: new FormControl('', Validators.required || Validators.minLength(8) || Validators.maxLength(12)),
+    fax: new FormControl('', Validators.required || Validators.minLength(8) || Validators.maxLength(12))
+   })
+}
 
- 
-  ngOnInit(): void {
-  }
-
-  //esta funcion la ejecuta el html y le pasa el parametro el input
-  update(){
-    //console.log("entre al search");
-    //console.log("me pasó el name: " + this.name);
-    //utilizando mi servicio ingreso a la funcion que envía la url de la api
-    //el camino que realiza la información es => input web ----> componente ----> servicio
-    this.updateService.updateClientName(this.id, this.newname).subscribe(data =>{
-      console.log(data)
-    })
-  }
-
-
+//esta funcion la ejecuta el html y le pasa el parametro el input
+formularioUpdate() {
+  var nuevoCliente = new CustomersI();
+  nuevoCliente.id = this.form.get('customerId').value,
+  nuevoCliente.companyName = this.form.get('companyName').value
+  nuevoCliente.contactName = this.form.get('contactName').value
+  nuevoCliente.contactTitle = this.form.get('contactTitle').value
+  nuevoCliente.address = this.form.get('address').value
+  nuevoCliente.city = this.form.get('city').value
+  nuevoCliente.region = this.form.get('region').value
+  nuevoCliente.postalCode = this.form.get('postalCode').value
+  nuevoCliente.country = this.form.get('country').value
+  nuevoCliente.contactPhone = this.form.get('phone').value
+  nuevoCliente.fax = this.form.get('fax').value
+  this.updateService.updateClientName(nuevoCliente).subscribe({
+   next: data => {
+      this.toastr.success("Nuevo cliente Agregado Exitosamente", 'Correcto!');
+    },
+    error: error => {
+      this.toastr.error('Ocurrió un error, revise sus datos!', 'Error!');
+    }
+  });
+}
 }

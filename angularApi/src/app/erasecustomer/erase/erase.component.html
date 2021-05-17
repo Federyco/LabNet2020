@@ -1,12 +1,12 @@
-<div class="container">
+<div class="container bg-primary bg-gradient" style="width: 250px;height: 250px;box-shadow: 3px 3px 3px 3px;margin-top: -1100px;margin-left: 825px;position:absolute">
     <form [formGroup]="formularioErase">
-        Ingrese el ID del cliente que desea eliminar:
+        <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;color:white;position: absolute;margin-top: 10px;">Ingrese el ID del cliente que desea eliminar:</p>
         <input [class.is-invalid]="
         formularioErase.get('customerId').touched &&
         formularioErase.get('customerId').invalid
-      " type="text" class="form-control" formControlName="customerId" style="position: absolute; width: 200px" required/>
-        <button (click)="Delete()" class="btn btn-primary" type="submit"
-            style="position: absolute; margin-top: 20px; margin-left: -65px">
+      " type="text" class="form-control" formControlName="customerId" style="position: absolute; width: 200px;margin-top: 75px;margin-left: 10px;" required/>
+        <button (click)="Delete()" class="btn btn-success" type="submit"
+            style="position: absolute; margin-top: 150px; margin-left: 70px">
             Eliminar
         </button>
     </form>
