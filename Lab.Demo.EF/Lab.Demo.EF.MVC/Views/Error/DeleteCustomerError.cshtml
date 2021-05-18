@@ -1,0 +1,10 @@
+﻿@model Lab.Demo.EF.MVC.Models.CustomerView
+@ViewBag.Title <p><h1>Sistema de Clientes</h1></p>
+
+<p>Ha ocurrido un error inesperado</p>
+
+    <p class="alert-danger" style="font-size:1.2em;"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true" style="color:red;"></span>  Recuerde que los ID de cliente, deben tener <strong>menos de 5 caracteres</strong> y este es un campo <strong>requerido</strong>
+    </p>
+    <div>
+        <p class="btn btn-link">@Html.ActionLink("Volver a Delete", "Delete", "Customer")</p>
+    </div>

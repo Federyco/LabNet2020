@@ -1,0 +1,34 @@
+﻿@model Lab.Demo.EF.MVC.Models.CustomerView
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    @{ViewBag.Title = "Customers Delete Page";}
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Own CSS-->
+    <link rel="stylesheet" href="~/css/estilos.css" />
+</head>
+<body>
+    <div class="formulario_delete">
+        @using (Html.BeginForm("Delete", "Customer", FormMethod.Post))
+        {
+            <form action="/" id="form">
+                <div>
+                    <h1 class="title_delete_decoration">Generar Nuevo Cliente</h1>
+                    <p class="info_delete_decoration">Ingrese los datos requeridos para <strong>eliminar un Cliente</strong> recuerde que todos los datos son <u>obligatorios</u>(*)</p>
+                </div>
+                <div class="div_label_id_delete"><label>ID: </label>(*)<p>@Html.TextBoxFor(c => c.id)</p><br></div>
+                <div class="button_delete"><input type="submit" name="Button" class="btn btn-success" value="Eliminar" /><br></div>
+            </form>
+        }
+        </div>
+
+</body>
+</html>
